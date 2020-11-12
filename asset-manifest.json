@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/lucas-soranzo/curriculum-vitae/static/css/main.87e8c332.chunk.css",
-    "main.js": "/lucas-soranzo/curriculum-vitae/static/js/main.5720a74f.chunk.js",
-    "main.js.map": "/lucas-soranzo/curriculum-vitae/static/js/main.5720a74f.chunk.js.map",
-    "runtime-main.js": "/lucas-soranzo/curriculum-vitae/static/js/runtime-main.4ef13b51.js",
-    "runtime-main.js.map": "/lucas-soranzo/curriculum-vitae/static/js/runtime-main.4ef13b51.js.map",
-    "static/js/2.4c8cda45.chunk.js": "/lucas-soranzo/curriculum-vitae/static/js/2.4c8cda45.chunk.js",
-    "static/js/2.4c8cda45.chunk.js.map": "/lucas-soranzo/curriculum-vitae/static/js/2.4c8cda45.chunk.js.map",
-    "static/js/3.aecf91a3.chunk.js": "/lucas-soranzo/curriculum-vitae/static/js/3.aecf91a3.chunk.js",
-    "static/js/3.aecf91a3.chunk.js.map": "/lucas-soranzo/curriculum-vitae/static/js/3.aecf91a3.chunk.js.map",
-    "index.html": "/lucas-soranzo/curriculum-vitae/index.html",
-    "static/css/main.87e8c332.chunk.css.map": "/lucas-soranzo/curriculum-vitae/static/css/main.87e8c332.chunk.css.map",
-    "static/js/2.4c8cda45.chunk.js.LICENSE.txt": "/lucas-soranzo/curriculum-vitae/static/js/2.4c8cda45.chunk.js.LICENSE.txt",
-    "static/media/logo.103b5fa1.svg": "/lucas-soranzo/curriculum-vitae/static/media/logo.103b5fa1.svg"
+    "main.css": "/curriculum-vitae/static/css/main.87e8c332.chunk.css",
+    "main.js": "/curriculum-vitae/static/js/main.5720a74f.chunk.js",
+    "main.js.map": "/curriculum-vitae/static/js/main.5720a74f.chunk.js.map",
+    "runtime-main.js": "/curriculum-vitae/static/js/runtime-main.84366c71.js",
+    "runtime-main.js.map": "/curriculum-vitae/static/js/runtime-main.84366c71.js.map",
+    "static/js/2.4c8cda45.chunk.js": "/curriculum-vitae/static/js/2.4c8cda45.chunk.js",
+    "static/js/2.4c8cda45.chunk.js.map": "/curriculum-vitae/static/js/2.4c8cda45.chunk.js.map",
+    "static/js/3.aecf91a3.chunk.js": "/curriculum-vitae/static/js/3.aecf91a3.chunk.js",
+    "static/js/3.aecf91a3.chunk.js.map": "/curriculum-vitae/static/js/3.aecf91a3.chunk.js.map",
+    "index.html": "/curriculum-vitae/index.html",
+    "static/css/main.87e8c332.chunk.css.map": "/curriculum-vitae/static/css/main.87e8c332.chunk.css.map",
+    "static/js/2.4c8cda45.chunk.js.LICENSE.txt": "/curriculum-vitae/static/js/2.4c8cda45.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/curriculum-vitae/static/media/logo.103b5fa1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ef13b51.js",
+    "static/js/runtime-main.84366c71.js",
     "static/js/2.4c8cda45.chunk.js",
     "static/css/main.87e8c332.chunk.css",
     "static/js/main.5720a74f.chunk.js"
