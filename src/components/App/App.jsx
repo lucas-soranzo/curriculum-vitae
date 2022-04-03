@@ -3,139 +3,153 @@ import Logo from "../../assets/logo.svg";
 import ProfilePic from "../../assets/profile-pic.jpg";
 import "./App.scss";
 
+const experienceItems = [
+  {
+    since: moment("2021-07-01", "YYYY-MM-DD"),
+    title: "First Job at a Foreign Company",
+  },
+  {
+    since: moment("2020-07-01", "YYYY-MM-DD"),
+    title: "First Job as a Team Leader",
+  },
+  {
+    since: moment("2017-05-01", "YYYY-MM-DD"),
+    title: "First Job in Tech",
+  },
+  {
+    since: moment("2015-02-01", "YYYY-MM-DD"),
+    title: "Github Account Created",
+  },
+];
+
+const languageItems = [
+  {
+    name: "Javascript",
+    image: (
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="js"
+        class="svg-inline--fa fa-js fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"
+        ></path>
+      </svg>
+    ),
+    description: "Experience with Frontend and Backend on various products.",
+    experienceLevel: "Senior",
+  },
+  {
+    name: "Python",
+    image: (
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="python"
+        class="svg-inline--fa fa-python fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"
+        ></path>
+      </svg>
+    ),
+    description: "Experience with backend on various products.",
+    experienceLevel: "Sernior",
+  },
+  {
+    name: "PHP",
+    image: (
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="php"
+        class="svg-inline--fa fa-php fa-w-20"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 512"
+      >
+        <path
+          fill="currentColor"
+          d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"
+        ></path>
+      </svg>
+    ),
+    description: "Experience on maintaining a legacy product.",
+    experienceLevel: "Junior",
+  },
+  {
+    name: "Swift",
+    image: (
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fab"
+        data-icon="swift"
+        class="svg-inline--fa fa-swift fa-w-14"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M448 156.09c0-4.51-.08-9-.2-13.52a196.31 196.31 0 0 0-2.58-29.42 99.62 99.62 0 0 0-9.22-28A94.08 94.08 0 0 0 394.84 44a99.17 99.17 0 0 0-28-9.22 195 195 0 0 0-29.43-2.59c-4.51-.12-9-.17-13.52-.2H124.14c-4.51 0-9 .08-13.52.2-2.45.07-4.91.15-7.37.27a171.68 171.68 0 0 0-22.06 2.32 103.06 103.06 0 0 0-21.21 6.1q-3.46 1.45-6.81 3.12a94.66 94.66 0 0 0-18.39 12.32c-1.88 1.61-3.69 3.28-5.43 5A93.86 93.86 0 0 0 12 85.17a99.45 99.45 0 0 0-9.22 28 196.31 196.31 0 0 0-2.54 29.4c-.13 4.51-.18 9-.21 13.52v199.83c0 4.51.08 9 .21 13.51a196.08 196.08 0 0 0 2.58 29.42 99.3 99.3 0 0 0 9.22 28A94.31 94.31 0 0 0 53.17 468a99.47 99.47 0 0 0 28 9.21 195 195 0 0 0 29.43 2.59c4.5.12 9 .17 13.52.2H323.91c4.51 0 9-.08 13.52-.2a196.59 196.59 0 0 0 29.44-2.59 99.57 99.57 0 0 0 28-9.21A94.22 94.22 0 0 0 436 426.84a99.3 99.3 0 0 0 9.22-28 194.79 194.79 0 0 0 2.59-29.42c.12-4.5.17-9 .2-13.51V172.14c-.01-5.35-.01-10.7-.01-16.05zm-69.88 241c-20-38.93-57.23-29.27-76.31-19.47-1.72 1-3.48 2-5.25 3l-.42.25c-39.5 21-92.53 22.54-145.85-.38A234.64 234.64 0 0 1 45 290.12a230.63 230.63 0 0 0 39.17 23.37c56.36 26.4 113 24.49 153 0-57-43.85-104.6-101-141.09-147.22a197.09 197.09 0 0 1-18.78-25.9c43.7 40 112.7 90.22 137.48 104.12-52.57-55.49-98.89-123.94-96.72-121.74 82.79 83.42 159.18 130.59 159.18 130.59 2.88 1.58 5 2.85 6.73 4a127.44 127.44 0 0 0 4.16-12.47c13.22-48.33-1.66-103.58-35.31-149.2C329.61 141.75 375 229.34 356.4 303.42c-.44 1.73-.95 3.4-1.44 5.09 38.52 47.4 28.04 98.17 23.13 88.59z"
+        ></path>
+      </svg>
+    ),
+    description:
+      "Experience on working along with a senior dev on various iOS APPs.",
+    experienceLevel: "Junior",
+  },
+];
+
 function App() {
   return (
     <div className="app">
       <section className="app-header">
         <img id="profile-pic" src={ProfilePic} />
         <h1>Lucas Soranzo</h1>
-        <small>Desenvolvedor Full Stack</small>
+        <small>Brazilian Full Stack Developer</small>
       </section>
       <section>
-        <h2>Tempo de Experiencia</h2>
-        <div className="experience-item">
-          <p>
-            <b>
-              {moment
-                .duration(moment().subtract(moment("2020-07-01", "YYYY-MM-DD")))
-                .humanize()}
-            </b>
-            <small>Desde julho de 2020</small>
-          </p>
-          <small className="primary">Lider de time</small>
-        </div>
-        <div className="experience-item">
-          <p>
-            <b>
-              {moment
-                .duration(moment().subtract(moment("2017-05-01", "YYYY-MM-DD")))
-                .humanize()}
-            </b>
-            <small>Desde maio de 2017</small>
-          </p>
-          <small className="primary">Primeiro emprego na area</small>
-        </div>
-        <div className="experience-item">
-          <p>
-            <b>
-              {moment
-                .duration(moment().subtract(moment("2015-02-01", "YYYY-MM-DD")))
-                .humanize()}
-            </b>
-            <small>Desde Fevereiro de 2015</small>
-          </p>
-          <small className="primary">Primeira conta no github</small>
-        </div>
+        <h2>Experience</h2>
+        {experienceItems.map((item) => (
+          <div className="experience-item">
+            <p>
+              <b>{moment.duration(moment().subtract(item.since)).humanize()}</b>
+              <small>Since {item.since.format("MMMM YYYY")}</small>
+            </p>
+            <small className="primary">{item.title}</small>
+          </div>
+        ))}
       </section>
       <section>
-        <h2>Linguagens</h2>
-        <div className="experience-item">
-          <p>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="js"
-              class="svg-inline--fa fa-js fa-w-14"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"
-              ></path>
-            </svg>
-            <small>Fluente, experiencia em todo o ciclo front/back</small>
-          </p>
-          <small className="primary">Pleno/Senior</small>
-        </div>
-        <div className="experience-item">
-          <p>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="python"
-              class="svg-inline--fa fa-python fa-w-14"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"
-              ></path>
-            </svg>
-            <small>Fluente, experiencia em todo o ciclo front/back</small>
-          </p>
-          <small className="primary">Pleno</small>
-        </div>
-        <div className="experience-item">
-          <p>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="php"
-              class="svg-inline--fa fa-php fa-w-20"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 512"
-            >
-              <path
-                fill="currentColor"
-                d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"
-              ></path>
-            </svg>
-            <small>Experiencia em manutenção de legado</small>
-          </p>
-          <small className="primary">Junior</small>
-        </div>
-        <div className="experience-item">
-          <p>
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="swift"
-              class="svg-inline--fa fa-swift fa-w-14"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="currentColor"
-                d="M448 156.09c0-4.51-.08-9-.2-13.52a196.31 196.31 0 0 0-2.58-29.42 99.62 99.62 0 0 0-9.22-28A94.08 94.08 0 0 0 394.84 44a99.17 99.17 0 0 0-28-9.22 195 195 0 0 0-29.43-2.59c-4.51-.12-9-.17-13.52-.2H124.14c-4.51 0-9 .08-13.52.2-2.45.07-4.91.15-7.37.27a171.68 171.68 0 0 0-22.06 2.32 103.06 103.06 0 0 0-21.21 6.1q-3.46 1.45-6.81 3.12a94.66 94.66 0 0 0-18.39 12.32c-1.88 1.61-3.69 3.28-5.43 5A93.86 93.86 0 0 0 12 85.17a99.45 99.45 0 0 0-9.22 28 196.31 196.31 0 0 0-2.54 29.4c-.13 4.51-.18 9-.21 13.52v199.83c0 4.51.08 9 .21 13.51a196.08 196.08 0 0 0 2.58 29.42 99.3 99.3 0 0 0 9.22 28A94.31 94.31 0 0 0 53.17 468a99.47 99.47 0 0 0 28 9.21 195 195 0 0 0 29.43 2.59c4.5.12 9 .17 13.52.2H323.91c4.51 0 9-.08 13.52-.2a196.59 196.59 0 0 0 29.44-2.59 99.57 99.57 0 0 0 28-9.21A94.22 94.22 0 0 0 436 426.84a99.3 99.3 0 0 0 9.22-28 194.79 194.79 0 0 0 2.59-29.42c.12-4.5.17-9 .2-13.51V172.14c-.01-5.35-.01-10.7-.01-16.05zm-69.88 241c-20-38.93-57.23-29.27-76.31-19.47-1.72 1-3.48 2-5.25 3l-.42.25c-39.5 21-92.53 22.54-145.85-.38A234.64 234.64 0 0 1 45 290.12a230.63 230.63 0 0 0 39.17 23.37c56.36 26.4 113 24.49 153 0-57-43.85-104.6-101-141.09-147.22a197.09 197.09 0 0 1-18.78-25.9c43.7 40 112.7 90.22 137.48 104.12-52.57-55.49-98.89-123.94-96.72-121.74 82.79 83.42 159.18 130.59 159.18 130.59 2.88 1.58 5 2.85 6.73 4a127.44 127.44 0 0 0 4.16-12.47c13.22-48.33-1.66-103.58-35.31-149.2C329.61 141.75 375 229.34 356.4 303.42c-.44 1.73-.95 3.4-1.44 5.09 38.52 47.4 28.04 98.17 23.13 88.59z"
-              ></path>
-            </svg>
-            <small>Experiencia em manutenção de APPs iOS</small>
-          </p>
-          <small className="primary">Trainee</small>
-        </div>
+        <h2>Languages</h2>
+        {languageItems.map((language) => (
+          <div className="experience-item">
+            <p>
+              {language.image}
+              <small>{language.description}</small>
+            </p>
+            <small className="primary">
+              {language.experienceLevel} on {language.name}
+            </small>
+          </div>
+        ))}
       </section>
       <section>
-        <h2>Plataformas & Frameworks & Ferramentas</h2>
+        <h2>Platforms & Frameworks & Other Technologies</h2>
         <div className="card-list">
           <div className="card-item">
             <svg
@@ -341,7 +355,7 @@ function App() {
       </section>
       <footer>
         <img src={Logo} className="app-logo" />
-        Powered by React.js
+        Built with React.js
       </footer>
     </div>
   );
